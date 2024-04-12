@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTSD - webpage</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container p-5">
+		<div class="row">
+			<div class="col">
+				<h1 style="color: #61AFEF;">Moritz Zimmerman</h1>
+				<figure class="d-flex align-items-center justify-content-center flex-column m-5">
+					<img src="./assets/user.png"
+						height="230px" width="200px" alt="Avatar" class="img-fluid max-width: 100% height: auto rounded-circle">
+					<figcaption></figcaption>
+				</figure>
+				<div class="card p-3">
+					<h2 style="color: #FE8019;">Datos Personales</h2>
+					<table class="table border border-dark">
+						<tbody id="student-info"></tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card p-3">
+					<h2 style="color: #FE8019;">Cursos Actuales</h2>
+
+					<form id="form" style="margin:10px;">
+						<div class="form-row">
+							<div class="col">
+								<input type="text" class="form-control" id="search-box" placeholder="Filtrar por nombre">
+							</div>
+							<div class="col">
+								<button type="button" id="button-filterByName" class="btn btn-warning">Aplicar</button>
+							</div>
+						</div>
+					</form>
+
+					<table class="table border border-dark">
+						<thead class="thead-dark">
+							<tr>
+								<th>Curso</th>
+								<th>Profesor</th>
+								<th>Créditos</th>
+							</tr>
+						</thead>
+						<tbody id="courses"></tbody>
+					</table>
+
+					<p>El total de creditos es: <span id="creditos"></span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="module" src="./scripts/course.js"></script>
+	<script type="module" src="./scripts/data_courses.js"></script>
+	<script type="module" src="./scripts/index.js"></script>
+</body>
+
+</html>
